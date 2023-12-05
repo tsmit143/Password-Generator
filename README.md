@@ -1,2 +1,11 @@
 # Password-Generator
-An application that can use to generate a random password based on selected criteria
+
+# Description
+This application generates a random password for the user based on critiria they've selected. This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code. There is a clean and polished user interface that is responsive by adapting to multiple screen sizes. The password can include lowercase, uppercase, numeric, and/or special characters.
+
+# Deployment
+
+![ScreenShot] (./images/screenshot.png)
+
+# License
+https://choosealicense.com/licenses/mit/

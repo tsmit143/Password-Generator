@@ -4,7 +4,6 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
-//console.log("hey");
 //Make Prompt for length of password
 
 //_________________________________________
@@ -17,8 +16,9 @@ if (lengthOption < 8) {
 if (lengthOption > 128) {
  alert ("option resquest too long, try again");
 }
+
 console.log(lengthOption); //delete later
-//_________________________________________
+//___________________Variables______________________
 var big = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var small = 'abcdefghijklmnopqrstuvwxyz';
 var digits = '123456789';
@@ -33,8 +33,10 @@ for(var i=0; i < small.length; i++){
 //  alert ("Lowercase is confirmed!");
 criteriaOps.push(small[i]);
  }
-} else if (lowCase === false){alert("Lowercase is denied");}//lowercase is denied and not added to critieria array
-
+} else if (lowCase === false){
+  alert("Lowercase is denied");
+  
+}//lowercase is denied and not added to critieria array
 console.log(criteriaOps);
 
 //____________________uppercase prompt_________________________
@@ -45,7 +47,7 @@ for(var i=0; i < big.length; i++){
  // alert ("Uppercase is confirmed!");
   criteriaOps.push(big[i]);
  }
-} else if (upperCase === false){alert("Lowercase is denied");}//uppercase is denied and not added to critieria array
+} else if (upperCase === false){alert("Uppercase is denied");}//uppercase is denied and not added to critieria array
 
 console.log(criteriaOps);
 //___________________special prompt__________________________
@@ -54,7 +56,7 @@ if (specChar === true) {
   for(var i=0; i < specials.length; i++){
     criteriaOps.push(specials[i]);
    }
-  } else if (specChar === false){alert("Lowercase is denied");}
+  } else if (specChar === false){alert("Special Characters is denied");}
   
   console.log(criteriaOps);
 
@@ -67,13 +69,16 @@ if (nums === true) {
   } else if (nums === false){alert("Lowercase is denied");}
   
   console.log(criteriaOps);
+
+//___________at least 1 criteria must be selected__________________
+
 //_____________________password generation_________________________
 
 var pass = ''; //password varible
 for (var i = 1; i <= lengthOption; i++){
   const randomIndex = Math.floor(Math.random() * criteriaOps.length);
   console.log (criteriaOps[randomIndex]);
- pass += criteriaOps[randomIndex];
+  pass += criteriaOps[randomIndex];
 }
   return pass;
 }
