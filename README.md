@@ -5,7 +5,7 @@ This application generates a random password for the user based on critiria they
 
 # Deployment
 
-![ScreenShot] (./images/screenshot.png)
+![ScreenShot] (../images/screenshot.png)
 
 # License
 https://choosealicense.com/licenses/mit/
